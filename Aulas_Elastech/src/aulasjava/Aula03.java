@@ -288,7 +288,5 @@ public class Aula03 {
                                 System.out.println("Operação inválida");
                         }
 
-
-
     }
 }
