@@ -3,79 +3,13 @@ package aulasjava;
 public class Aula03 {
     public static void main(String[] args) {
 
-                // 1) Aprovação do Aluno:
-                // Crie uma variável double nota com um valor.
-                // Use if-else para verificar se a nota é maior ou igual a 7.0.
-                // Se for, imprima "Aprovado!". Senão, imprima "Reprovado.".
-//                double nota = 8.5;
-//                if (nota >= 7.0) {
-//                    System.out.println("Aprovado!");
-//                } else {
-//                    System.out.println("Reprovado.");
-//                }
 
-                // 2) Positivo, Negativo ou Zero:
-                // Crie uma variável int numero.
-                // Use if-else if-else para imprimir se o número é "Positivo", "Negativo" ou "Zero".
-//                int numero = -3;
-//                if (numero > 0) {
-//                    System.out.println("Positivo");
-//                } else if (numero < 0) {
-//                    System.out.println("Negativo");
-//                } else {
-//                    System.out.println("Zero");
-//                }
-
-                // 3) Calculadora de Desconto:
-                // Crie uma variável double valorCompra.
-                // Se o valor da compra for maior ou igual a R$ 200,00, aplique um desconto de 15%.
-                // Senão, não aplique desconto. Imprima o valor final da compra.
-//                double valorCompra = 250.0;
-//                if (valorCompra >= 200.0) {
-//                    valorCompra = valorCompra * 0.85;
-//                }
-//                String resultado = String.format("%.2f", valorCompra);
-//                System.out.println("Valor final da compra: R$ " + resultado);
-
-                // 4) Categoria por Idade:
-                // Crie uma variável int idade e use if-else if-else para imprimir a categoria:
-                // 0 a 12 anos: "Criança"
-                // 13 a 17 anos: "Adolescente"
-                // 18 a 59 anos: "Adulto"
-                // 60 anos ou mais: "Idoso"
-//                int idade = 15;
-//                if (idade >= 0 && idade <= 12) {
-//                    System.out.println("Criança");
-//                } else if (idade >= 13 && idade <= 17) {
-//                    System.out.println("Adolescente");
-//                } else if (idade >= 18 && idade <= 59) {
-//                    System.out.println("Adulto");
-//                } else if (idade >= 60) {
-//                    System.out.println("Idoso");
-//                } else {
-//                    System.out.println("Idade inválida");
-//                }
-
-                // 5) Login Simples:
-                // Crie duas variáveis String, usuarioCorreto e senhaCorreta, com os valores "admin" e "java123".
-                // Crie outras duas variáveis, usuarioDigitado e senhaDigitada.
-                // Use if para verificar se os dados digitados são iguais aos corretos.
-                // Se forem, imprima "Login bem-sucedido!". Senão, imprima "Usuário ou senha inválidos.".
-
-//                String usuarioCorreto = "admin";
-//                String senhaCorreta = "java123";
-//                String usuarioDigitado = "admin";
-//                String senhaDigitada = "java124";
-//                if (usuarioDigitado.equals(usuarioCorreto) && senhaDigitada.equals(senhaCorreta)) {
-//                    System.out.println("Login bem-sucedido!");
-//                } else {
-//                    System.out.println("Usuário ou senha inválidos :( ");
-//                }
 
                         // 1) Validação de Mês:
                         // Peça um número de 1 a 12. Use um if para verificar se o número está nesse intervalo.
                         // Se estiver, use um switch para imprimir o nome do mês. Se não, imprima "Mês inválido".
                         int numeroMes = 5;
+
                         if (numeroMes >= 1 && numeroMes <= 12) {
                             switch (numeroMes) {
                                 case 1: System.out.println("Janeiro"); break;
@@ -99,6 +33,7 @@ public class Aula03 {
                         // Menu: 1-Hambúrguer, 2-Pizza, 3-Salada. No case da Pizza, pergunte se quer vegetariana.
                         int opcaoMenu = 2;
                         boolean pizzaVegetariana = true;
+
                         switch (opcaoMenu) {
                             case 1:
                                 System.out.println("Você escolheu Hambúrguer");
@@ -123,6 +58,7 @@ public class Aula03 {
                         char categoria = 'E';
                         boolean horarioPico = false;
                         double tarifa;
+
                         if (horarioPico) {
                             tarifa = 5.50;
                         } else {
@@ -149,6 +85,7 @@ public class Aula03 {
                         // 4) Sistema de Notas com Conceito:
                         // Nota de 0 a 10. <5: "Reprovado", 5-7: "Recuperação", >7: switch em "status" para parabéns.
                         double nota = 8.0;
+
                         if (nota < 5) {
                             System.out.println("Reprovado");
                         } else if (nota <= 7) {
@@ -170,6 +107,7 @@ public class Aula03 {
                         double saldo = 500.0;
                         double valorSaque = 600.0;
                         double valorDeposito = 200.0;
+
                         switch (operacao) {
                             case 'S':
                                 if (valorSaque <= saldo) {
@@ -192,6 +130,7 @@ public class Aula03 {
                         String tipoVeiculo = "Caminhão";
                         boolean eixoExtra = true;
                         double pedagio = 0.0;
+
                         switch (tipoVeiculo) {
                             case "Carro":
                                 pedagio = 15.0;
