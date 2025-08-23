@@ -41,7 +41,8 @@ public class Aula04 {
 
         // 5. Somar números até que o usuário digite 0 (do-while)
         // Some números digitados pelo usuário até que ele digite 0.
-        int soma = 0, valor;
+        int soma = 0;
+        int valor;
         do {
             System.out.print("Digite um número para somar (0 para sair): ");
             valor = sc.nextInt();
@@ -53,7 +54,7 @@ public class Aula04 {
 
         // 1. Sequência de Fibonacci
         // Imprime os primeiros 15 números da sequência de Fibonacci usando um loop for.
-        int a = 0
+        int a = 0;
         int b = 1;
         System.out.print("Sequência de Fibonacci: ");
         for (int i = 0; i < 15; i++) {
@@ -65,7 +66,6 @@ public class Aula04 {
 
         // 2. Desenhando um Triângulo de Asteriscos
         // Desenha um triângulo de asteriscos com 10 linhas de altura usando loops aninhados.
-        System.out.println("Triângulo de asteriscos:");
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
@@ -101,24 +101,24 @@ public class Aula04 {
 
         // 5. Verificador de Número Primo
         // Verifica se um número digitado pelo usuário é primo.
-        System.out.print("Digite um número inteiro positivo para verificar se é primo: ");
-        int numero = sc.nextInt();
-        boolean ehPrimo = true;
-        if (numero <= 1) {
-            ehPrimo = false;
-        } else {
-            for (int i = 2; i <= Math.sqrt(numero); i++) {
-                if (numero % i == 0) {
-                    ehPrimo = false;
-                    break;
-                }
-            }
-        }
-        if (ehPrimo) {
-            System.out.println(numero + " é primo.");
-        } else {
-            System.out.println(numero + " não é primo.");
-        }
+//        System.out.print("Digite um número inteiro positivo para verificar se é primo: ");
+//        int numero = sc.nextInt();
+//        boolean ehPrimo = true;
+//        if (numero <= 1) {
+//            ehPrimo = false;
+//        } else {
+//            for (int i = 2; i <= Math.sqrt(numero); i++) {
+//                if (numero % i == 0) {
+//                    ehPrimo = false;
+//                    break;
+//                }
+//            }
+//        }
+//        if (ehPrimo) {
+//            System.out.println(numero + " é primo.");
+//        } else {
+//            System.out.println(numero + " não é primo.");
+//        }
 
     }
 }
