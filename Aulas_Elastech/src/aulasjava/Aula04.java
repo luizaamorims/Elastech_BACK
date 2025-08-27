@@ -75,7 +75,8 @@ public class Aula04 {
 
         // 3. Soma de Compras até Parar
         // Simula um caixa de supermercado, somando valores até o usuário digitar 0.
-        double total = 0, valorProduto;
+        double total = 0;
+        double valorProduto;
         do {
             System.out.print("Digite o valor do produto (0 para finalizar): ");
             valorProduto = sc.nextDouble();
@@ -95,30 +96,32 @@ public class Aula04 {
                 System.out.println("O número secreto é maior!");
             } else if (palpite > numeroSecreto) {
                 System.out.println("O número secreto é menor!");
+            } else {
+                System.out.println("Digite um numero válido.");
             }
         } while (palpite != numeroSecreto);
         System.out.println("Parabéns! Você acertou o número secreto :)) ");
 
-        // 5. Verificador de Número Primo
-        // Verifica se um número digitado pelo usuário é primo.
-//        System.out.print("Digite um número inteiro positivo para verificar se é primo: ");
-//        int numero = sc.nextInt();
-//        boolean ehPrimo = true;
-//        if (numero <= 1) {
-//            ehPrimo = false;
-//        } else {
-//            for (int i = 2; i <= Math.sqrt(numero); i++) {
-//                if (numero % i == 0) {
-//                    ehPrimo = false;
-//                    break;
-//                }
-//            }
-//        }
-//        if (ehPrimo) {
-//            System.out.println(numero + " é primo.");
-//        } else {
-//            System.out.println(numero + " não é primo.");
-//        }
+//         5. Verificador de Número Primo
+//         Verifica se um número digitado pelo usuário é primo.
+        System.out.print("Digite um número inteiro positivo para verificar se é primo: ");
+        int numeroresp = sc.nextInt();
+        boolean ehPrimo = true;
+        if (numeroresp <= 1) {
+            ehPrimo = false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(numeroresp); i++) {
+                if (numeroresp % i == 0) {
+                    ehPrimo = false;
+                    break;
+                }
+            }
+        }
+        if (ehPrimo) {
+            System.out.println(numeroresp + " é primo.");
+        } else {
+            System.out.println(numeroresp + " não é primo.");
+        }
 
     }
 }
