@@ -15,12 +15,12 @@ public class RevisaoJava {
         //exercicio2(sc);
         //exercicio3(sc);
         //exercicio4(sc);
-        // exercicio5();
+        //exercicio5();
         //exercicio6(sc);
-        // exercicio7(sc);
-        // exercicio8(sc);
-        // exercicio9();
-         exercicio10(sc);
+        //exercicio7(sc);
+        //exercicio8(sc);
+        //exercicio9();
+        exercicio10(sc);
 
         sc.close();
     }
@@ -173,21 +173,17 @@ public class RevisaoJava {
     public static void exercicio6(Scanner sc) {
         System.out.println("\n EXERCÍCIO 6 - Loop WHILE ");
 
-        int numero;
+        int numero = -1;
         int soma = 0;
 
         System.out.println("Digite números (digite 0 para parar):");
 
-        while (true) {
-            System.out.print("Número: ");
-            numero = sc.nextInt();
+       while (numero != 0){
+          int numeroresp = sc.nextInt();
+          soma += numeroresp;
+          numero = numeroresp;
 
-            if (numero == 0) {
-                break;
-            }
-
-            soma += numero;
-        }
+       }
 
         System.out.println("Soma total dos números digitados: " + soma);
     }
@@ -315,9 +311,7 @@ public class RevisaoJava {
         ArrayList<Double> saldos = new ArrayList<>();
         int opcao;
 
-
         do {
-
             System.out.println("MENU PRINCIPAL");
             System.out.println("1 - Criar nova conta");
             System.out.println("2 - Depositar");
@@ -333,21 +327,12 @@ public class RevisaoJava {
             switch (opcao) {
                 case 1:
                     System.out.println("CRIAR NOVA CONTA");
-
                     System.out.print("Digite o número da conta: ");
                     int numeroConta = sc.nextInt();
                     sc.nextLine();
 
 
-                    boolean contaExiste = false;
-                    for (int i = 0; i < numerosConta.size(); i++) {
-                        if (numerosConta.get(i) == numeroConta) {
-                            contaExiste = true;
-                            break;
-                        }
-                    }
-
-                    if (contaExiste) {
+                    if (numerosConta.contains(numeroConta)) {
                         System.out.println("ERRO: Número da conta já existe!");
                     } else {
                         System.out.print("Digite o nome do titular: ");
@@ -371,7 +356,7 @@ public class RevisaoJava {
                     break;
 
                 case 2:
-                    System.out.println("\n--- DEPOSITAR ---");
+                    System.out.println("DEPOSITAR");
 
                     if (numerosConta.isEmpty()) {
                         System.out.println("Nenhuma conta cadastrada!");
@@ -379,14 +364,7 @@ public class RevisaoJava {
                         System.out.print("Digite o número da conta: ");
                         int contaDeposito = sc.nextInt();
 
-                        int indiceDeposito = -1;
-
-                        for (int i = 0; i < numerosConta.size(); i++) {
-                            if (numerosConta.get(i) == contaDeposito) {
-                                indiceDeposito = i;
-                                break;
-                            }
-                        }
+                        int indiceDeposito = numerosConta.indexOf(contaDeposito);
 
                         if (indiceDeposito == -1) {
                             System.out.println("ERRO: Conta não encontrada!");
@@ -401,7 +379,7 @@ public class RevisaoJava {
                                 double novoSaldo = saldoAtual + valorDeposito;
                                 saldos.set(indiceDeposito, novoSaldo);
 
-                                System.out.println("✓Depósito realizado com sucesso!");
+                                System.out.println("Depósito realizado com sucesso!");
                                 System.out.printf("Saldo anterior: R$ %.2f\n", saldoAtual);
                                 System.out.printf("Valor depositado: R$ %.2f\n", valorDeposito);
                                 System.out.printf("Novo saldo: R$ %.2f\n", novoSaldo);
@@ -419,14 +397,8 @@ public class RevisaoJava {
                         System.out.print("Digite o número da conta: ");
                         int contaSaque = sc.nextInt();
 
-                        int indiceSaque = -1;
 
-                        for (int i = 0; i < numerosConta.size(); i++) {
-                            if (numerosConta.get(i) == contaSaque) {
-                                indiceSaque = i;
-                                break;
-                            }
-                        }
+                        int indiceSaque = numerosConta.indexOf(contaSaque);
 
                         if (indiceSaque == -1) {
                             System.out.println("ERRO: Conta não encontrada!");
@@ -464,14 +436,8 @@ public class RevisaoJava {
                         System.out.print("Digite o número da conta: ");
                         int contaSaldo = sc.nextInt();
 
-                        int indiceSaldo = -1;
 
-                        for (int i = 0; i < numerosConta.size(); i++) {
-                            if (numerosConta.get(i) == contaSaldo) {
-                                indiceSaldo = i;
-                                break;
-                            }
-                        }
+                        int indiceSaldo = numerosConta.indexOf(contaSaldo);
 
                         if (indiceSaldo == -1) {
                             System.out.println("ERRO: Conta não encontrada!");
@@ -519,11 +485,7 @@ public class RevisaoJava {
                 default:
                     System.out.println("Opção inválida! Tente novamente.");
             }
-
-            if (opcao != 6) {
-                System.out.println("\nPressione Enter para continuar...");
-                sc.nextLine();
-            }
+            System.out.println();
 
         } while (opcao != 6);
 
