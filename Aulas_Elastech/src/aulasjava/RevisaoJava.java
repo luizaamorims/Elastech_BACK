@@ -211,11 +211,8 @@ public class RevisaoJava {
         }
 
         System.out.print("\nNúmeros digitados: ");
-        for (int i = 0; i < numeros.length; i++) {
-            System.out.print(numeros[i]);
-            if (i < numeros.length - 1) {
-                System.out.print(", ");
-            }
+        for (int numero : numeros) {
+            System.out.print(numero + " ");
         }
 
         System.out.println("\nSoma total: " + soma);

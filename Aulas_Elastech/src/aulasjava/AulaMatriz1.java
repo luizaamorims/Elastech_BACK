@@ -93,7 +93,7 @@ public class AulaMatriz1 {
 
         boolean encontrado = false;
         for (String nome : alunos)
-            if (nome.equals(nomeProcurado))
+            if (alunos.contains(nomeProcurado))
                 encontrado = true;
         System.out.println("\nExercício 8: " + nomeProcurado + (encontrado ? " está" : " não está") + " na lista.");
 
